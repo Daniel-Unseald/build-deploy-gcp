@@ -1,9 +1,6 @@
 name: Build and Push to Google Artifact Registry
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:

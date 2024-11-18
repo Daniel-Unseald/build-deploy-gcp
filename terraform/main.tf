@@ -6,7 +6,7 @@ resource "google_cloud_run_v2_service" "test-service" {
 
   template {
     containers {
-      image = "nginx:latest"
+      image = "${var.google_region}-docker.pkg.dev/${var.google_project}/${var.artifact_registry_repo}/my-app:latest"
       ports {
         name           = "http1"
         container_port = 80
